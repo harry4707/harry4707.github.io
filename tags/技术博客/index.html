@@ -107,7 +107,7 @@
 <meta name="description" content="闲看庭前花开花落，漫随天外云卷云舒">
 <meta property="og:type" content="website">
 <meta property="og:title" content="小鱼的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/技术博客/index.html">
 <meta property="og:site_name" content="小鱼的博客">
 <meta property="og:description" content="闲看庭前花开花落，漫随天外云卷云舒">
 <meta name="twitter:card" content="summary">
@@ -130,7 +130,7 @@
   };
 </script>
 
-  <title> 小鱼的博客 </title>
+  <title> 标签: 技术博客 | 小鱼的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -161,9 +161,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -290,252 +288,45 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-collapse">
+    <div class="collection-title">
+      <h2 >
+        技术博客
+        <small>标签</small>
+      </h2>
+    </div>
+
     
       
 
-  
-  
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
 
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
+      <h1 class="post-title">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
+            <a class="post-title-link" href="/2016/06/05/hello-world-1/" itemprop="url">
               
-                
-                <a class="post-title-link" href="/2016/06/05/hello-world-1/" itemprop="url">
-                  java虚拟机分析
-                </a>
+                <span itemprop="name">java虚拟机分析</span>
               
-            
-          </h1>
+            </a>
         
+      </h1>
 
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-05T19:13:42+08:00" content="2016-06-05">
-              2016-06-05
-            </time>
-          </span>
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-06-05T19:13:42+08:00"
+              content="2016-06-05" >
+          06-05
+        </time>
+      </div>
 
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/06/05/hello-world-1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/05/hello-world-1/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/06/05/hello-world-1/" class="leancloud_visitors" data-flag-title="java虚拟机分析">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="0-前言"><a href="#0-前言" class="headerlink" title="0.前言"></a>0.前言</h1><p>这是我第一次写博客，希望大家多多支持</p>
-<h1 id="1-java虚拟机的结构分析"><a href="#1-java虚拟机的结构分析" class="headerlink" title="1.java虚拟机的结构分析"></a>1.java虚拟机的结构分析</h1><p>JVM虚拟机主要由类加载子系统，运行时数据区（内存空间），执行引擎以及本地接口方法等组成。其中运行时数据区包括方法区，堆，java栈，pc寄存器，本地方法栈组成（系统函数相关）。</p>
-<h1 id="2-类加载子系统"><a href="#2-类加载子系统" class="headerlink" title="2.类加载子系统"></a>2.类加载子系统</h1><p>类加载子系统负责加载编译好的.class字节码文件，并且装入内存，是的jvm可以实例化或以其他方式使用加载后的类。jvm的类加载子系统支持在运行时候的动态加载。其优点是可以节省内存空间。灵活的从网络上加载类，动态加载的另一个好处是通过命名空间的风格来实现类的隔离，增加了整个系统的安全性。</p>
-<h2 id="2-1ClassLoader的分类"><a href="#2-1ClassLoader的分类" class="headerlink" title="2.1ClassLoader的分类"></a>2.1ClassLoader的分类</h2><p>启动类加载器（BootStrap class Loader）：负责加载rt.jar文件中的所有java类。C++实现，java语言中无法获得其引用。</p>
-<p>系统类加载器（Extension Class Loader）：负责加载一些扩展功能的jar包。</p>
-<p>系统类加载器（System Class Loader）：负责加载启动参中指定的Classpath中的jar包及目录，包括自己写的java类。</p>
-<h2 id="2-2-ClassLoader的工作原理"><a href="#2-2-ClassLoader的工作原理" class="headerlink" title="2.2 ClassLoader的工作原理"></a>2.2 ClassLoader的工作原理</h2><h3 id="2-2-1装载"><a href="#2-2-1装载" class="headerlink" title="2.2.1装载"></a>2.2.1装载</h3><p>通过类的全限定名和ClassLoader加载类，主要指的是将指定的.class文件加载至jvm。（双亲委派机制）<br>在内存中，ClassLoader实例和类的实例都位于对中，它们的类信息都位于方法区。</p>
-<h3 id="2-2-2链接"><a href="#2-2-2链接" class="headerlink" title="2.2.2链接"></a>2.2.2链接</h3><p>链接的任务是将二进制的类型信息合并到jvm运行时的状态中。主要分为以下三步：</p>
-<p>准备：为类分配内存，同时初始化类中的静态变量赋值为默认值。<br>解析：主要是把类的常量池中的符号引用解析为直接引用。</p>
-<h3 id="2-2-3初始化"><a href="#2-2-3初始化" class="headerlink" title="2.2.3初始化"></a>2.2.3初始化</h3><p>初始化类中的静态变量，并且执行类中的static代码。</p>
-<h1 id="3-运行时数据区"><a href="#3-运行时数据区" class="headerlink" title="3.运行时数据区"></a>3.运行时数据区</h1><p>运行数据区由方法区，堆，java栈，pc寄存器，本地方法栈组成。</p>
-<h2 id="3-1java栈"><a href="#3-1java栈" class="headerlink" title="3.1java栈"></a>3.1java栈</h2><p>作用为存储方法参数，局部变量，中间运算结果，并且提供部分其他模块工作需要的数据。其分为三个部分：局部变量区，操作数栈，帧数据区。</p>
-<h2 id="3-2本地方法栈"><a href="#3-2本地方法栈" class="headerlink" title="3.2本地方法栈"></a>3.2本地方法栈</h2><p>其类似于java栈，主要存储了本地方法调用的状态。区别是java栈为jvm执行java方法服务。本地方法栈为jvm执行Native方法服务。</p>
-<h2 id="3-3PC寄存器"><a href="#3-3PC寄存器" class="headerlink" title="3.3PC寄存器"></a>3.3PC寄存器</h2><p>严格来说是一个数据结构，用于保存当前正在执行的程序的内存地址。用于解决多线程的执行。</p>
-<h2 id="3-4方法区"><a href="#3-4方法区" class="headerlink" title="3.4方法区"></a>3.4方法区</h2><p>类型信息和类的静态变量都存储在方法区中。（线程共享区域，不是线程安全）</p>
-<h2 id="3-5堆"><a href="#3-5堆" class="headerlink" title="3.5堆"></a>3.5堆</h2><p>其是jvm所管理的内存中最大的一块，是所有java线程所共享的。用于存储对象实例以及数组值。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+    </header>
   </article>
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/06/05/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-05T19:06:39+08:00" content="2016-06-05">
-              2016-06-05
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/06/05/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/05/hello-world/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/06/05/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
+  </div>
 
   
 
