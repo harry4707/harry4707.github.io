@@ -373,22 +373,22 @@
       
         
           
-            <h1 id="0-前言"><a href="#0-前言" class="headerlink" title="0.前言"></a>0.前言</h1><p>这是我第一次写博客，希望大家多多支持</p>
-<h1 id="1-java虚拟机的结构分析"><a href="#1-java虚拟机的结构分析" class="headerlink" title="1.java虚拟机的结构分析"></a>1.java虚拟机的结构分析</h1><p>JVM虚拟机主要由类加载子系统，运行时数据区（内存空间），执行引擎以及本地接口方法等组成。其中运行时数据区包括方法区，堆，java栈，pc寄存器，本地方法栈组成（系统函数相关）。</p>
-<h1 id="2-类加载子系统"><a href="#2-类加载子系统" class="headerlink" title="2.类加载子系统"></a>2.类加载子系统</h1><p>类加载子系统负责加载编译好的.class字节码文件，并且装入内存，是的jvm可以实例化或以其他方式使用加载后的类。jvm的类加载子系统支持在运行时候的动态加载。其优点是可以节省内存空间。灵活的从网络上加载类，动态加载的另一个好处是通过命名空间的风格来实现类的隔离，增加了整个系统的安全性。</p>
-<h2 id="2-1ClassLoader的分类"><a href="#2-1ClassLoader的分类" class="headerlink" title="2.1ClassLoader的分类"></a>2.1ClassLoader的分类</h2><p>启动类加载器（BootStrap class Loader）：负责加载rt.jar文件中的所有java类。C++实现，java语言中无法获得其引用。</p>
+            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这是我第一次写博客，希望大家多多支持</p>
+<h1 id="java虚拟机的结构分析"><a href="#java虚拟机的结构分析" class="headerlink" title="java虚拟机的结构分析"></a>java虚拟机的结构分析</h1><p>JVM虚拟机主要由类加载子系统，运行时数据区（内存空间），执行引擎以及本地接口方法等组成。其中运行时数据区包括方法区，堆，java栈，pc寄存器，本地方法栈组成（系统函数相关）。</p>
+<h1 id="类加载子系统"><a href="#类加载子系统" class="headerlink" title="类加载子系统"></a>类加载子系统</h1><p>类加载子系统负责加载编译好的.class字节码文件，并且装入内存，是的jvm可以实例化或以其他方式使用加载后的类。jvm的类加载子系统支持在运行时候的动态加载。其优点是可以节省内存空间。灵活的从网络上加载类，动态加载的另一个好处是通过命名空间的风格来实现类的隔离，增加了整个系统的安全性。</p>
+<h2 id="ClassLoader的分类"><a href="#ClassLoader的分类" class="headerlink" title="ClassLoader的分类"></a>ClassLoader的分类</h2><p>启动类加载器（BootStrap class Loader）：负责加载rt.jar文件中的所有java类。C++实现，java语言中无法获得其引用。</p>
 <p>系统类加载器（Extension Class Loader）：负责加载一些扩展功能的jar包。</p>
 <p>系统类加载器（System Class Loader）：负责加载启动参中指定的Classpath中的jar包及目录，包括自己写的java类。</p>
-<h2 id="2-2-ClassLoader的工作原理"><a href="#2-2-ClassLoader的工作原理" class="headerlink" title="2.2 ClassLoader的工作原理"></a>2.2 ClassLoader的工作原理</h2><h3 id="2-2-1装载"><a href="#2-2-1装载" class="headerlink" title="2.2.1装载"></a>2.2.1装载</h3><p>通过类的全限定名和ClassLoader加载类，主要指的是将指定的.class文件加载至jvm。（双亲委派机制）<br>在内存中，ClassLoader实例和类的实例都位于对中，它们的类信息都位于方法区。</p>
-<h3 id="2-2-2链接"><a href="#2-2-2链接" class="headerlink" title="2.2.2链接"></a>2.2.2链接</h3><p>链接的任务是将二进制的类型信息合并到jvm运行时的状态中。主要分为以下三步：</p>
+<h2 id="ClassLoader的工作原理"><a href="#ClassLoader的工作原理" class="headerlink" title="ClassLoader的工作原理"></a>ClassLoader的工作原理</h2><h3 id="装载"><a href="#装载" class="headerlink" title="装载"></a>装载</h3><p>通过类的全限定名和ClassLoader加载类，主要指的是将指定的.class文件加载至jvm。（双亲委派机制）<br>在内存中，ClassLoader实例和类的实例都位于对中，它们的类信息都位于方法区。</p>
+<h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p>链接的任务是将二进制的类型信息合并到jvm运行时的状态中。主要分为以下三步：</p>
 <p>准备：为类分配内存，同时初始化类中的静态变量赋值为默认值。<br>解析：主要是把类的常量池中的符号引用解析为直接引用。</p>
-<h3 id="2-2-3初始化"><a href="#2-2-3初始化" class="headerlink" title="2.2.3初始化"></a>2.2.3初始化</h3><p>初始化类中的静态变量，并且执行类中的static代码。</p>
-<h1 id="3-运行时数据区"><a href="#3-运行时数据区" class="headerlink" title="3.运行时数据区"></a>3.运行时数据区</h1><p>运行数据区由方法区，堆，java栈，pc寄存器，本地方法栈组成。</p>
-<h2 id="3-1java栈"><a href="#3-1java栈" class="headerlink" title="3.1java栈"></a>3.1java栈</h2><p>作用为存储方法参数，局部变量，中间运算结果，并且提供部分其他模块工作需要的数据。其分为三个部分：局部变量区，操作数栈，帧数据区。</p>
-<h2 id="3-2本地方法栈"><a href="#3-2本地方法栈" class="headerlink" title="3.2本地方法栈"></a>3.2本地方法栈</h2><p>其类似于java栈，主要存储了本地方法调用的状态。区别是java栈为jvm执行java方法服务。本地方法栈为jvm执行Native方法服务。</p>
-<h2 id="3-3PC寄存器"><a href="#3-3PC寄存器" class="headerlink" title="3.3PC寄存器"></a>3.3PC寄存器</h2><p>严格来说是一个数据结构，用于保存当前正在执行的程序的内存地址。用于解决多线程的执行。</p>
-<h2 id="3-4方法区"><a href="#3-4方法区" class="headerlink" title="3.4方法区"></a>3.4方法区</h2><p>类型信息和类的静态变量都存储在方法区中。（线程共享区域，不是线程安全）</p>
-<h2 id="3-5堆"><a href="#3-5堆" class="headerlink" title="3.5堆"></a>3.5堆</h2><p>其是jvm所管理的内存中最大的一块，是所有java线程所共享的。用于存储对象实例以及数组值。</p>
+<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>初始化类中的静态变量，并且执行类中的static代码。</p>
+<h1 id="运行时数据区"><a href="#运行时数据区" class="headerlink" title="运行时数据区"></a>运行时数据区</h1><p>运行数据区由方法区，堆，java栈，pc寄存器，本地方法栈组成。</p>
+<h2 id="java栈"><a href="#java栈" class="headerlink" title="java栈"></a>java栈</h2><p>作用为存储方法参数，局部变量，中间运算结果，并且提供部分其他模块工作需要的数据。其分为三个部分：局部变量区，操作数栈，帧数据区。</p>
+<h2 id="本地方法栈"><a href="#本地方法栈" class="headerlink" title="本地方法栈"></a>本地方法栈</h2><p>其类似于java栈，主要存储了本地方法调用的状态。区别是java栈为jvm执行java方法服务。本地方法栈为jvm执行Native方法服务。</p>
+<h2 id="PC寄存器"><a href="#PC寄存器" class="headerlink" title="PC寄存器"></a>PC寄存器</h2><p>严格来说是一个数据结构，用于保存当前正在执行的程序的内存地址。用于解决多线程的执行。</p>
+<h2 id="方法区"><a href="#方法区" class="headerlink" title="方法区"></a>方法区</h2><p>类型信息和类的静态变量都存储在方法区中。（线程共享区域，不是线程安全）</p>
+<h2 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h2><p>其是jvm所管理的内存中最大的一块，是所有java线程所共享的。用于存储对象实例以及数组值。</p>
 
           
         
