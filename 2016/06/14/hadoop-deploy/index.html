@@ -104,16 +104,16 @@
 
 
 
-<meta name="description" content="准备Jdk安装与配置Oracle官网下载jdk，这里我下载的是jdk-6u45-linux-i586.bin，并上传到虚拟机上，使用root用户，执行以下命令创建文件夹，移动安装文件，执行安装。1234mkdir /usr/java															        mv/home/auxu/Desktop/jdk-6u45-linux-i586.bin /usr/java  cd /u">
+<meta name="description" content="准备Jdk安装与配置Oracle官网下载jdk，这里我下载的是jdk-6u45-linux-i586.bin，并上传到虚拟机上，使用root用户，执行以下命令创建文件夹，移动安装文件，执行安装。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CentOS下安装伪分布式Hadoop-1.2.1">
 <meta property="og:url" content="http://yoursite.com/2016/06/14/hadoop-deploy/index.html">
 <meta property="og:site_name" content="小鱼的博客">
-<meta property="og:description" content="准备Jdk安装与配置Oracle官网下载jdk，这里我下载的是jdk-6u45-linux-i586.bin，并上传到虚拟机上，使用root用户，执行以下命令创建文件夹，移动安装文件，执行安装。1234mkdir /usr/java															        mv/home/auxu/Desktop/jdk-6u45-linux-i586.bin /usr/java  cd /u">
-<meta property="og:updated_time" content="2016-06-14T09:58:17.471Z">
+<meta property="og:description" content="准备Jdk安装与配置Oracle官网下载jdk，这里我下载的是jdk-6u45-linux-i586.bin，并上传到虚拟机上，使用root用户，执行以下命令创建文件夹，移动安装文件，执行安装。">
+<meta property="og:updated_time" content="2016-06-19T08:02:51.869Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS下安装伪分布式Hadoop-1.2.1">
-<meta name="twitter:description" content="准备Jdk安装与配置Oracle官网下载jdk，这里我下载的是jdk-6u45-linux-i586.bin，并上传到虚拟机上，使用root用户，执行以下命令创建文件夹，移动安装文件，执行安装。1234mkdir /usr/java															        mv/home/auxu/Desktop/jdk-6u45-linux-i586.bin /usr/java  cd /u">
+<meta name="twitter:description" content="准备Jdk安装与配置Oracle官网下载jdk，这里我下载的是jdk-6u45-linux-i586.bin，并上传到虚拟机上，使用root用户，执行以下命令创建文件夹，移动安装文件，执行安装。">
 
 
 
@@ -367,7 +367,7 @@
       
 
       
-        <h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>Jdk安装与配置<br>Oracle官网下载jdk，这里我下载的是jdk-6u45-linux-i586.bin，并上传到虚拟机上，使用root用户，执行以下命令创建文件夹，移动安装文件，执行安装。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mkdir /usr/java															        </span><br><span class="line">mv/home/auxu/Desktop/jdk-6u45-linux-i586.bin /usr/java  </span><br><span class="line">cd /usr/java  </span><br><span class="line">./jdk-6u45-linux-i586.bin</span><br></pre></td></tr></table></figure></p>
+        <h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>Jdk安装与配置<br>Oracle官网下载jdk，这里我下载的是jdk-6u45-linux-i586.bin，并上传到虚拟机上，使用root用户，执行以下命令创建文件夹，移动安装文件，执行安装。<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mkdir /usr/java															        </span><br><span class="line">mv/home/auxu/Desktop/jdk-6u45-linux-i586.bin /usr/java  </span><br><span class="line">cd /usr/java  </span><br><span class="line">./jdk-6u45-linux-i586.bin</span><br></pre></td></tr></table></figure></p>
 <h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/profile</span><br></pre></td></tr></table></figure>
 <p>加入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/usr/java/jdk1.6.0_45        </span><br><span class="line">export JRE_HOME=$JAVA_HOME/jre</span><br><span class="line">export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</span><br><span class="line">export PATH=$PATH:$JAVA_HOME/bin</span><br></pre></td></tr></table></figure></p>
 <p>保存完毕之后，执行:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure></p>

@@ -105,21 +105,18 @@
 
 
 <meta name="description" content="前言这是我第一次写博客，希望大家多多支持
-java虚拟机的结构分析JVM虚拟机主要由类加载子系统，运行时数据区（内存空间），执行引擎以及本地接口方法等组成。其中运行时数据区包括方法区，堆，java栈，pc寄存器，本地方法栈组成（系统函数相关）。
-类加载子系统类加载子系统负责加载编译好的.class字节码文件，并且装入内存，是的jvm可以实例化或以其他方式使用加载后的类。jvm的类加载子系统支持在运">
+java虚拟机的结构分析JVM虚拟机主要由类加载子系统，运行时数据区（内存空间），执行引擎以及本地接口方法等组成。其中运行时数据区包括方法区，堆，java栈，pc寄存器，本地方法栈组成（系统函数相关）。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java虚拟机分析">
 <meta property="og:url" content="http://yoursite.com/2016/06/05/hello-world-1/index.html">
 <meta property="og:site_name" content="小鱼的博客">
 <meta property="og:description" content="前言这是我第一次写博客，希望大家多多支持
-java虚拟机的结构分析JVM虚拟机主要由类加载子系统，运行时数据区（内存空间），执行引擎以及本地接口方法等组成。其中运行时数据区包括方法区，堆，java栈，pc寄存器，本地方法栈组成（系统函数相关）。
-类加载子系统类加载子系统负责加载编译好的.class字节码文件，并且装入内存，是的jvm可以实例化或以其他方式使用加载后的类。jvm的类加载子系统支持在运">
-<meta property="og:updated_time" content="2016-06-13T00:19:49.265Z">
+java虚拟机的结构分析JVM虚拟机主要由类加载子系统，运行时数据区（内存空间），执行引擎以及本地接口方法等组成。其中运行时数据区包括方法区，堆，java栈，pc寄存器，本地方法栈组成（系统函数相关）。">
+<meta property="og:updated_time" content="2016-06-19T08:03:23.017Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java虚拟机分析">
 <meta name="twitter:description" content="前言这是我第一次写博客，希望大家多多支持
-java虚拟机的结构分析JVM虚拟机主要由类加载子系统，运行时数据区（内存空间），执行引擎以及本地接口方法等组成。其中运行时数据区包括方法区，堆，java栈，pc寄存器，本地方法栈组成（系统函数相关）。
-类加载子系统类加载子系统负责加载编译好的.class字节码文件，并且装入内存，是的jvm可以实例化或以其他方式使用加载后的类。jvm的类加载子系统支持在运">
+java虚拟机的结构分析JVM虚拟机主要由类加载子系统，运行时数据区（内存空间），执行引擎以及本地接口方法等组成。其中运行时数据区包括方法区，堆，java栈，pc寄存器，本地方法栈组成（系统函数相关）。">
 
 
 
@@ -374,7 +371,7 @@ java虚拟机的结构分析JVM虚拟机主要由类加载子系统，运行时�
 
       
         <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这是我第一次写博客，希望大家多多支持</p>
-<h1 id="java虚拟机的结构分析"><a href="#java虚拟机的结构分析" class="headerlink" title="java虚拟机的结构分析"></a>java虚拟机的结构分析</h1><p>JVM虚拟机主要由类加载子系统，运行时数据区（内存空间），执行引擎以及本地接口方法等组成。其中运行时数据区包括方法区，堆，java栈，pc寄存器，本地方法栈组成（系统函数相关）。</p>
+<h1 id="java虚拟机的结构分析"><a href="#java虚拟机的结构分析" class="headerlink" title="java虚拟机的结构分析"></a>java虚拟机的结构分析</h1><p>JVM虚拟机主要由类加载子系统，运行时数据区（内存空间），执行引擎以及本地接口方法等组成。其中运行时数据区包括方法区，堆，java栈，pc寄存器，本地方法栈组成（系统函数相关）。<br><a id="more"></a></p>
 <h1 id="类加载子系统"><a href="#类加载子系统" class="headerlink" title="类加载子系统"></a>类加载子系统</h1><p>类加载子系统负责加载编译好的.class字节码文件，并且装入内存，是的jvm可以实例化或以其他方式使用加载后的类。jvm的类加载子系统支持在运行时候的动态加载。其优点是可以节省内存空间。灵活的从网络上加载类，动态加载的另一个好处是通过命名空间的风格来实现类的隔离，增加了整个系统的安全性。</p>
 <h2 id="ClassLoader的分类"><a href="#ClassLoader的分类" class="headerlink" title="ClassLoader的分类"></a>ClassLoader的分类</h2><p>启动类加载器（BootStrap class Loader）：负责加载rt.jar文件中的所有java类。C++实现，java语言中无法获得其引用。</p>
 <p>系统类加载器（Extension Class Loader）：负责加载一些扩展功能的jar包。</p>
