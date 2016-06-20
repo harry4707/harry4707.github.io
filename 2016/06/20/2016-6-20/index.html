@@ -104,19 +104,16 @@
 
 
 
-<meta name="description" content="前言这是我第一次写博客，希望大家多多支持
-java虚拟机的结构分析JVM虚拟机主要由类加载子系统，运行时数据区（内存空间），执行引擎以及本地接口方法等组成。其中运行时数据区包括方法区，堆，java栈，pc寄存器，本地方法栈组成（系统函数相关）。">
+<meta name="description" content="在VC中使用过CMap以及在Java中使用过Map的朋友应该很熟悉，使用Map可以方便实现基于键值对数据的处理，在C#中,你就需要实现IDictionary接口的关键字值集合类，允许通过关键字（如字符串名）进行索引，这也可以使用索引符来完成，但这种索引符参数是与存储的项相关联的关键字，而不是int索引。通常情况下，我们使用泛型类Dictionary来实现这样的功能。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java虚拟机分析">
-<meta property="og:url" content="http://yoursite.com/2016/06/05/hello-world-1/index.html">
+<meta property="og:title" content="C#中使用Dictionary实现Map数据结构">
+<meta property="og:url" content="http://yoursite.com/2016/06/20/2016-6-20/index.html">
 <meta property="og:site_name" content="小鱼的博客">
-<meta property="og:description" content="前言这是我第一次写博客，希望大家多多支持
-java虚拟机的结构分析JVM虚拟机主要由类加载子系统，运行时数据区（内存空间），执行引擎以及本地接口方法等组成。其中运行时数据区包括方法区，堆，java栈，pc寄存器，本地方法栈组成（系统函数相关）。">
-<meta property="og:updated_time" content="2016-06-19T08:03:23.017Z">
+<meta property="og:description" content="在VC中使用过CMap以及在Java中使用过Map的朋友应该很熟悉，使用Map可以方便实现基于键值对数据的处理，在C#中,你就需要实现IDictionary接口的关键字值集合类，允许通过关键字（如字符串名）进行索引，这也可以使用索引符来完成，但这种索引符参数是与存储的项相关联的关键字，而不是int索引。通常情况下，我们使用泛型类Dictionary来实现这样的功能。">
+<meta property="og:updated_time" content="2016-06-20T01:03:28.533Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java虚拟机分析">
-<meta name="twitter:description" content="前言这是我第一次写博客，希望大家多多支持
-java虚拟机的结构分析JVM虚拟机主要由类加载子系统，运行时数据区（内存空间），执行引擎以及本地接口方法等组成。其中运行时数据区包括方法区，堆，java栈，pc寄存器，本地方法栈组成（系统函数相关）。">
+<meta name="twitter:title" content="C#中使用Dictionary实现Map数据结构">
+<meta name="twitter:description" content="在VC中使用过CMap以及在Java中使用过Map的朋友应该很熟悉，使用Map可以方便实现基于键值对数据的处理，在C#中,你就需要实现IDictionary接口的关键字值集合类，允许通过关键字（如字符串名）进行索引，这也可以使用索引符来完成，但这种索引符参数是与存储的项相关联的关键字，而不是int索引。通常情况下，我们使用泛型类Dictionary来实现这样的功能。">
 
 
 
@@ -134,7 +131,7 @@ java虚拟机的结构分析JVM虚拟机主要由类加载子系统，运行时�
   };
 </script>
 
-  <title> java虚拟机分析 | 小鱼的博客 </title>
+  <title> C#中使用Dictionary实现Map数据结构 | 小鱼的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -314,7 +311,7 @@ java虚拟机的结构分析JVM虚拟机主要由类加载子系统，运行时�
             
             
               
-                java虚拟机分析
+                C#中使用Dictionary实现Map数据结构
               
             
           </h1>
@@ -326,8 +323,8 @@ java虚拟机的结构分析JVM虚拟机主要由类加载子系统，运行时�
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-05T19:13:42+08:00" content="2016-06-05">
-              2016-06-05
+            <time itemprop="dateCreated" datetime="2016-06-20T08:36:24+08:00" content="2016-06-20">
+              2016-06-20
             </time>
           </span>
 
@@ -337,8 +334,8 @@ java虚拟机的结构分析JVM虚拟机主要由类加载子系统，运行时�
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/05/hello-world-1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/05/hello-world-1/" itemprop="commentsCount"></span>
+                <a href="/2016/06/20/2016-6-20/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/20/2016-6-20/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -348,7 +345,7 @@ java虚拟机的结构分析JVM虚拟机主要由类加载子系统，运行时�
 
           
           
-             <span id="/2016/06/05/hello-world-1/" class="leancloud_visitors" data-flag-title="java虚拟机分析">
+             <span id="/2016/06/20/2016-6-20/" class="leancloud_visitors" data-flag-title="C#中使用Dictionary实现Map数据结构">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -370,22 +367,10 @@ java虚拟机的结构分析JVM虚拟机主要由类加载子系统，运行时�
       
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这是我第一次写博客，希望大家多多支持</p>
-<h1 id="java虚拟机的结构分析"><a href="#java虚拟机的结构分析" class="headerlink" title="java虚拟机的结构分析"></a>java虚拟机的结构分析</h1><p>JVM虚拟机主要由类加载子系统，运行时数据区（内存空间），执行引擎以及本地接口方法等组成。其中运行时数据区包括方法区，堆，java栈，pc寄存器，本地方法栈组成（系统函数相关）。<br><a id="more"></a></p>
-<h1 id="类加载子系统"><a href="#类加载子系统" class="headerlink" title="类加载子系统"></a>类加载子系统</h1><p>类加载子系统负责加载编译好的.class字节码文件，并且装入内存，是的jvm可以实例化或以其他方式使用加载后的类。jvm的类加载子系统支持在运行时候的动态加载。其优点是可以节省内存空间。灵活的从网络上加载类，动态加载的另一个好处是通过命名空间的风格来实现类的隔离，增加了整个系统的安全性。</p>
-<h2 id="ClassLoader的分类"><a href="#ClassLoader的分类" class="headerlink" title="ClassLoader的分类"></a>ClassLoader的分类</h2><p>启动类加载器（BootStrap class Loader）：负责加载rt.jar文件中的所有java类。C++实现，java语言中无法获得其引用。</p>
-<p>系统类加载器（Extension Class Loader）：负责加载一些扩展功能的jar包。</p>
-<p>系统类加载器（System Class Loader）：负责加载启动参中指定的Classpath中的jar包及目录，包括自己写的java类。</p>
-<h2 id="ClassLoader的工作原理"><a href="#ClassLoader的工作原理" class="headerlink" title="ClassLoader的工作原理"></a>ClassLoader的工作原理</h2><h3 id="装载"><a href="#装载" class="headerlink" title="装载"></a>装载</h3><p>通过类的全限定名和ClassLoader加载类，主要指的是将指定的.class文件加载至jvm。（双亲委派机制）<br>在内存中，ClassLoader实例和类的实例都位于对中，它们的类信息都位于方法区。</p>
-<h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p>链接的任务是将二进制的类型信息合并到jvm运行时的状态中。主要分为以下三步：</p>
-<p>准备：为类分配内存，同时初始化类中的静态变量赋值为默认值。<br>解析：主要是把类的常量池中的符号引用解析为直接引用。</p>
-<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>初始化类中的静态变量，并且执行类中的static代码。</p>
-<h1 id="运行时数据区"><a href="#运行时数据区" class="headerlink" title="运行时数据区"></a>运行时数据区</h1><p>运行数据区由方法区，堆，java栈，pc寄存器，本地方法栈组成。</p>
-<h2 id="java栈"><a href="#java栈" class="headerlink" title="java栈"></a>java栈</h2><p>作用为存储方法参数，局部变量，中间运算结果，并且提供部分其他模块工作需要的数据。其分为三个部分：局部变量区，操作数栈，帧数据区。</p>
-<h2 id="本地方法栈"><a href="#本地方法栈" class="headerlink" title="本地方法栈"></a>本地方法栈</h2><p>其类似于java栈，主要存储了本地方法调用的状态。区别是java栈为jvm执行java方法服务。本地方法栈为jvm执行Native方法服务。</p>
-<h2 id="PC寄存器"><a href="#PC寄存器" class="headerlink" title="PC寄存器"></a>PC寄存器</h2><p>严格来说是一个数据结构，用于保存当前正在执行的程序的内存地址。用于解决多线程的执行。</p>
-<h2 id="方法区"><a href="#方法区" class="headerlink" title="方法区"></a>方法区</h2><p>类型信息和类的静态变量都存储在方法区中。（线程共享区域，不是线程安全）</p>
-<h2 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h2><p>其是jvm所管理的内存中最大的一块，是所有java线程所共享的。用于存储对象实例以及数组值。</p>
+        <p>在VC中使用过CMap以及在Java中使用过Map的朋友应该很熟悉，使用Map可以方便实现基于键值对数据的处理，在C#中,你就需要实现IDictionary接口的关键字值集合类，允许通过关键字（如字符串名）进行索引，这也可以使用索引符来完成，但这种索引符参数是与存储的项相关联的关键字，而不是int索引。通常情况下，我们使用泛型类Dictionary来实现这样的功能。<br><a id="more"></a><br>Dictionary泛型类提供快速的基于键值的元素查找，Dictionary<k, v="">是一个泛型 ，他本身有集合的功能有时候可以把它看成数组，它的结构是这样的：Dictionary&lt;[key], [value]&gt; ，他的特点是存入对象是需要与[key]值一一对应的存入该泛型 ，通过某一个一定的[key]去找到对应的值。Dictionary<k, v="">泛型类在定义变量是需要指定当前存储的键值对类型，如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dictionary&lt;string, string&gt; hashMap = new Dictionary&lt;string, string&gt;();</span><br></pre></td></tr></table></figure></k,></k,></p>
+<p>补充说明：<br>1、必须包含名空间System.Collection.Generic2、Dictionary里面的每一个元素都是一个键值对(由二个元素组成：键和值)3、键必须是唯一的,而值不需要唯一的4、键和值都可以是任何类型(比如：string, int, 自定义类型，等等)5、通过一个键读取一个值的时间是接近O(1)6、键值对之间的偏序可以不定义首先给出一个使用泛型类Dictionary<k, v="">的完整例子，其中包含了创建和初始化一个Dictionary对象、判断是否存在相应的key并显示、遍历所有的Keys、遍历所有的Values、遍历整个字典。C#代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">/// &lt;summary&gt; </span><br><span class="line">/// Dictionary的基本用法 </span><br><span class="line">/// &lt;/summary&gt; </span><br><span class="line">static void DictionaryDemo()</span><br><span class="line">&#123;</span><br><span class="line">Dictionary&lt;int, string&gt; dict = new Dictionary&lt;int, string&gt;();</span><br><span class="line">dict.Add(1, &quot;111&quot;);</span><br><span class="line">dict.Add(2, &quot;222&quot;);</span><br><span class="line">//判断是否存在相应的key并显示 </span><br><span class="line">if (dict.ContainsKey(2))</span><br><span class="line">&#123;</span><br><span class="line">Console.WriteLine(dict[2]);</span><br><span class="line">&#125;</span><br><span class="line">//遍历Keys </span><br><span class="line">foreach (var item in dict.Keys)</span><br><span class="line">&#123;</span><br><span class="line">Console.WriteLine(&quot;Key:&#123;0&#125;&quot;, item);</span><br><span class="line">&#125;</span><br><span class="line">//遍历Values </span><br><span class="line">foreach (var item in dict.Values)</span><br><span class="line">&#123;</span><br><span class="line">Console.WriteLine(&quot;value:&#123;0&#125;&quot;, item);</span><br><span class="line">&#125;</span><br><span class="line">//遍历整个字典 </span><br><span class="line">foreach (var item in dict)</span><br><span class="line">&#123;</span><br><span class="line">Console.WriteLine(&quot;key:&#123;0&#125; value:&#123;1&#125;&quot;, item.Key, item.Value);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></k,></p>
+<p>下面对一些比较重要的用法进行补充介绍：<br>1.在字典Dictionary<k, v="">中查找指定键的元素<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">static void Test(string[] args)</span><br><span class="line">&#123;</span><br><span class="line">Dictionary&lt;string, int&gt; d = new Dictionary&lt;string, int&gt;();</span><br><span class="line">d.Add(&quot;C#&quot;, 2);</span><br><span class="line">d.Add(&quot;VB&quot;, 1);</span><br><span class="line">d.Add(&quot;C&quot;, 0);</span><br><span class="line">d.Add(&quot;C++&quot;, -1);</span><br><span class="line">//判断字典中是否包含键为“VB”的元素</span><br><span class="line">if (d.ContainsKey(&quot;VB&quot;)) // True</span><br><span class="line">&#123;</span><br><span class="line">int p = d[&quot;VB&quot;];</span><br><span class="line">Console.WriteLine(p);</span><br><span class="line">&#125;</span><br><span class="line">//判断字典中是否包含键为“C”的元素</span><br><span class="line">if (d.ContainsKey(&quot;C&quot;))</span><br><span class="line">&#123;</span><br><span class="line">int p1 = d[&quot;C&quot;];</span><br><span class="line">Console.WriteLine(p1);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></k,></p>
+<p>2.在字典Dictionary<k, v="">中删除指定键的元素<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">static void Test(string[] args)</span><br><span class="line">&#123;</span><br><span class="line">Dictionary&lt;string, int&gt; d = new Dictionary&lt;string, int&gt;();</span><br><span class="line">d.Add(&quot;C#&quot;, 2);</span><br><span class="line">d.Add(&quot;VB&quot;, 1);</span><br><span class="line">d.Add(&quot;C&quot;, 0);</span><br><span class="line">d.Add(&quot;C++&quot;, -1);</span><br><span class="line">//删除键为“C”的元素</span><br><span class="line">d.Remove(&quot;C&quot;);</span><br><span class="line">//删除键为“VB”的元素</span><br><span class="line">d.Remove(&quot;VB&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></k,></p>
 
       
     </div>
@@ -437,17 +422,13 @@ java虚拟机的结构分析JVM虚拟机主要由类加载子系统，运行时�
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/05/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2016/06/14/hadoop-deploy/" rel="next" title="CentOS下安装伪分布式Hadoop-1.2.1">
+                <i class="fa fa-chevron-left"></i> CentOS下安装伪分布式Hadoop-1.2.1
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/06/14/hadoop-deploy/" rel="prev" title="CentOS下安装伪分布式Hadoop-1.2.1">
-                CentOS下安装伪分布式Hadoop-1.2.1 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -462,10 +443,10 @@ java虚拟机的结构分析JVM虚拟机主要由类加载子系统，运行时�
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/06/05/hello-world-1/"
-     data-title="java虚拟机分析"
+        <div class="ds-share flat" data-thread-key="2016/06/20/2016-6-20/"
+     data-title="C#中使用Dictionary实现Map数据结构"
      data-content=""
-     data-url="http://yoursite.com/2016/06/05/hello-world-1/">
+     data-url="http://yoursite.com/2016/06/20/2016-6-20/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -495,8 +476,8 @@ java虚拟机的结构分析JVM虚拟机主要由类加载子系统，运行时�
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/06/05/hello-world-1/"
-           data-title="java虚拟机分析" data-url="http://yoursite.com/2016/06/05/hello-world-1/">
+      <div class="ds-thread" data-thread-key="2016/06/20/2016-6-20/"
+           data-title="C#中使用Dictionary实现Map数据结构" data-url="http://yoursite.com/2016/06/20/2016-6-20/">
       </div>
     
   </div>
@@ -591,7 +572,7 @@ java虚拟机的结构分析JVM虚拟机主要由类加载子系统，运行时�
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#java虚拟机的结构分析"><span class="nav-number">2.</span> <span class="nav-text">java虚拟机的结构分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类加载子系统"><span class="nav-number">3.</span> <span class="nav-text">类加载子系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ClassLoader的分类"><span class="nav-number">3.1.</span> <span class="nav-text">ClassLoader的分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ClassLoader的工作原理"><span class="nav-number">3.2.</span> <span class="nav-text">ClassLoader的工作原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#装载"><span class="nav-number">3.2.1.</span> <span class="nav-text">装载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链接"><span class="nav-number">3.2.2.</span> <span class="nav-text">链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化"><span class="nav-number">3.2.3.</span> <span class="nav-text">初始化</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#运行时数据区"><span class="nav-number">4.</span> <span class="nav-text">运行时数据区</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#java栈"><span class="nav-number">4.1.</span> <span class="nav-text">java栈</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地方法栈"><span class="nav-number">4.2.</span> <span class="nav-text">本地方法栈</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PC寄存器"><span class="nav-number">4.3.</span> <span class="nav-text">PC寄存器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法区"><span class="nav-number">4.4.</span> <span class="nav-text">方法区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#堆"><span class="nav-number">4.5.</span> <span class="nav-text">堆</span></a></li></ol></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
         </section>
