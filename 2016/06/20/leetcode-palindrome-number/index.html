@@ -88,7 +88,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="leetcode 编程题," />
+  <meta name="keywords" content="leetcode," />
 
 
 
@@ -110,7 +110,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/06/20/leetcode-palindrome-number/index.html">
 <meta property="og:site_name" content="小鱼的博客">
 <meta property="og:description" content="【题目】Determine whether an integer is a palindrome. Do this without extra space.">
-<meta property="og:updated_time" content="2016-06-20T07:35:01.097Z">
+<meta property="og:updated_time" content="2016-06-20T08:46:33.709Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="leetcode_PalindromeNumber">
 <meta name="twitter:description" content="【题目】Determine whether an integer is a palindrome. Do this without extra space.">
@@ -176,7 +176,7 @@
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle">hello world</p>
+  <p class="site-subtitle">路漫漫兮其修远，吾将上下而求索</p>
 </div>
 
 <div class="site-nav-toggle">
@@ -369,6 +369,7 @@
       
         <h2 id="【题目】Determine-whether-an-integer-is-a-palindrome-Do-this-without-extra-space"><a href="#【题目】Determine-whether-an-integer-is-a-palindrome-Do-this-without-extra-space" class="headerlink" title="【题目】Determine whether an integer is a palindrome. Do this without extra space."></a>【题目】Determine whether an integer is a palindrome. Do this without extra space.</h2><a id="more"></a>
 <h2 id="【解答】Palindrome指的是回文，而这里需要找的是回文数，指的是1、121、34543这样从左往右看和从右往左看都相等的数。先找到数字总共有几位，然后判断高位和低位是否相等，相等是回文数。getDigit方法是用来取数x的第i位的数字的，i从低到高记位，最低位为1。"><a href="#【解答】Palindrome指的是回文，而这里需要找的是回文数，指的是1、121、34543这样从左往右看和从右往左看都相等的数。先找到数字总共有几位，然后判断高位和低位是否相等，相等是回文数。getDigit方法是用来取数x的第i位的数字的，i从低到高记位，最低位为1。" class="headerlink" title="【解答】Palindrome指的是回文，而这里需要找的是回文数，指的是1、121、34543这样从左往右看和从右往左看都相等的数。先找到数字总共有几位，然后判断高位和低位是否相等，相等是回文数。getDigit方法是用来取数x的第i位的数字的，i从低到高记位，最低位为1。"></a>【解答】Palindrome指的是回文，而这里需要找的是回文数，指的是1、121、34543这样从左往右看和从右往左看都相等的数。先找到数字总共有几位，然后判断高位和低位是否相等，相等是回文数。getDigit方法是用来取数x的第i位的数字的，i从低到高记位，最低位为1。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">public class Solution &#123;</span><br><span class="line">    public boolean isPalindrome(int x) &#123;</span><br><span class="line">        if(x&lt;0)</span><br><span class="line">            return false;</span><br><span class="line">         </span><br><span class="line">        int quotient = x;</span><br><span class="line">        int digits = 0;</span><br><span class="line">        while (quotient!=0) &#123;</span><br><span class="line">            quotient /= 10;</span><br><span class="line">            digits++;</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        for (int i=1; i&lt;=digits; i++) &#123;</span><br><span class="line">            int high = digits - i + 1;</span><br><span class="line">            int low = i;</span><br><span class="line">                 </span><br><span class="line">            if (getDigit(x, high) != getDigit(x, low))</span><br><span class="line">                return false;</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    private int getDigit(int x, int i)&#123;</span><br><span class="line">        if (i==1)</span><br><span class="line">            return x%10;</span><br><span class="line">         </span><br><span class="line">        return (x / (int)Math.pow(10, i-1)) % 10;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -410,7 +411,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/leetcode-编程题/" rel="tag">#leetcode 编程题</a>
+            <a href="/tags/leetcode/" rel="tag">#leetcode</a>
           
         </div>
       
@@ -426,6 +427,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/21/ZigZag-Conversion/" rel="prev" title="ZigZag Conversion">
+                ZigZag Conversion <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -519,7 +524,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

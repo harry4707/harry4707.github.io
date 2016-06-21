@@ -88,7 +88,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="技术文档," />
+  <meta name="keywords" content="leetcode," />
 
 
 
@@ -104,16 +104,16 @@
 
 
 
-<meta name="description" content="准备Jdk安装与配置Oracle官网下载jdk，这里我下载的是jdk-6u45-linux-i586.bin，并上传到虚拟机上，使用root用户，执行以下命令创建文件夹，移动安装文件，执行安装。">
+<meta name="description" content="【题目】The string “PAYPALISHIRING” is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CentOS下安装伪分布式Hadoop-1.2.1">
-<meta property="og:url" content="http://yoursite.com/2016/06/14/hadoop-deploy/index.html">
+<meta property="og:title" content="ZigZag Conversion">
+<meta property="og:url" content="http://yoursite.com/2016/06/21/ZigZag-Conversion/index.html">
 <meta property="og:site_name" content="小鱼的博客">
-<meta property="og:description" content="准备Jdk安装与配置Oracle官网下载jdk，这里我下载的是jdk-6u45-linux-i586.bin，并上传到虚拟机上，使用root用户，执行以下命令创建文件夹，移动安装文件，执行安装。">
-<meta property="og:updated_time" content="2016-06-19T08:02:51.869Z">
+<meta property="og:description" content="【题目】The string “PAYPALISHIRING” is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)">
+<meta property="og:updated_time" content="2016-06-20T08:45:59.789Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CentOS下安装伪分布式Hadoop-1.2.1">
-<meta name="twitter:description" content="准备Jdk安装与配置Oracle官网下载jdk，这里我下载的是jdk-6u45-linux-i586.bin，并上传到虚拟机上，使用root用户，执行以下命令创建文件夹，移动安装文件，执行安装。">
+<meta name="twitter:title" content="ZigZag Conversion">
+<meta name="twitter:description" content="【题目】The string “PAYPALISHIRING” is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)">
 
 
 
@@ -131,7 +131,7 @@
   };
 </script>
 
-  <title> CentOS下安装伪分布式Hadoop-1.2.1 | 小鱼的博客 </title>
+  <title> ZigZag Conversion | 小鱼的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -311,7 +311,7 @@
             
             
               
-                CentOS下安装伪分布式Hadoop-1.2.1
+                ZigZag Conversion
               
             
           </h1>
@@ -323,8 +323,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-14T16:37:14+08:00" content="2016-06-14">
-              2016-06-14
+            <time itemprop="dateCreated" datetime="2016-06-21T16:31:46+08:00" content="2016-06-21">
+              2016-06-21
             </time>
           </span>
 
@@ -334,8 +334,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/14/hadoop-deploy/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/14/hadoop-deploy/" itemprop="commentsCount"></span>
+                <a href="/2016/06/21/ZigZag-Conversion/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/21/ZigZag-Conversion/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -345,7 +345,7 @@
 
           
           
-             <span id="/2016/06/14/hadoop-deploy/" class="leancloud_visitors" data-flag-title="CentOS下安装伪分布式Hadoop-1.2.1">
+             <span id="/2016/06/21/ZigZag-Conversion/" class="leancloud_visitors" data-flag-title="ZigZag Conversion">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -367,30 +367,14 @@
       
 
       
-        <h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>Jdk安装与配置<br>Oracle官网下载jdk，这里我下载的是jdk-6u45-linux-i586.bin，并上传到虚拟机上，使用root用户，执行以下命令创建文件夹，移动安装文件，执行安装。<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mkdir /usr/java															        </span><br><span class="line">mv/home/auxu/Desktop/jdk-6u45-linux-i586.bin /usr/java  </span><br><span class="line">cd /usr/java  </span><br><span class="line">./jdk-6u45-linux-i586.bin</span><br></pre></td></tr></table></figure></p>
-<h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/profile</span><br></pre></td></tr></table></figure>
-<p>加入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/usr/java/jdk1.6.0_45        </span><br><span class="line">export JRE_HOME=$JAVA_HOME/jre</span><br><span class="line">export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</span><br><span class="line">export PATH=$PATH:$JAVA_HOME/bin</span><br></pre></td></tr></table></figure></p>
-<p>保存完毕之后，执行:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure></p>
-<p>验证java配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost java]# java -version  </span><br><span class="line">java version &quot;1.6.0_45&quot;  </span><br><span class="line">Java(TM) SE Runtime Environment (build 1.6.0_45-b06)  </span><br><span class="line">Java HotSpot(TM) Client VM (build 20.45-b01, mixed mode, sharing)</span><br></pre></td></tr></table></figure></p>
-<p>可以简单写一个java class来进行测试，这里不多说明<br>创建Hadoop用户及相关应用文件夹<br>同样使用root用户创建一个名为hadoop的新用户<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">useradd hadoop  </span><br><span class="line">passwd hadoop</span><br></pre></td></tr></table></figure></p>
-<p>创建应用文件夹，以便进行之后的hadoop配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mkdir /hadoop  </span><br><span class="line">mkdir /hadoop/hdfs  </span><br><span class="line">mkdir /hadoop/hdfs/data  </span><br><span class="line">mkdir /hadoop/hdfs/name  </span><br><span class="line">mkdir /hadoop/mapred  </span><br><span class="line">mkdir /hadoop/mapred/local  </span><br><span class="line">mkdir /hadoop/mapred/system  </span><br><span class="line">mkdir /hadoop/tmp</span><br></pre></td></tr></table></figure></p>
-<p>将文件夹属主更改为hadoop用户<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown -R hadoop /hadoop</span><br></pre></td></tr></table></figure></p>
-<p>设置Hadoop用户使之可以免密码ssh到localhost<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">su - hadoop  </span><br><span class="line">ssh-keygen -t dsa -P &apos;&apos; -f ~/.ssh/id_dsa    </span><br><span class="line">cat ~/.ssh/id_dsa.pub&gt;&gt; ~/.ssh/authorized_keys  	  </span><br><span class="line">cd /home/hadoop/.ssh   </span><br><span class="line">chmod 600 authorized_keys</span><br></pre></td></tr></table></figure></p>
-<p>注意这里的权限问题，保证.ssh目录权限为700，authorized_keys为600<br>验证：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[hadoop@localhost .ssh]$ ssh localhost  </span><br><span class="line">Last login: Sun Nov 17 22:11:55 2013</span><br></pre></td></tr></table></figure></p>
-<p>ssh localhost之后无需输入密码就可以连接，配置OK<br>安装配置Hadoop<br>创建目录并安装<br>重新切回root用户，创建安装目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">su   </span><br><span class="line">mkdir /opt/hadoop</span><br></pre></td></tr></table></figure></p>
-<p>将安装文件移动到以上新建目录，确保其执行权限，然后执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mv /home/auxu/Desktop/hadoop-1.2.1.tar.gz /opt/hadoop  </span><br><span class="line">cd /opt/hadoop  </span><br><span class="line">tar -xzvf hadoop-1.2.1.tar.gz</span><br></pre></td></tr></table></figure></p>
-<p>将hadoop安装目录的属主更改为hadoop用户<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown -R hadoop /opt/hadoop</span><br></pre></td></tr></table></figure></p>
-<p>切换到hadoop用户，修改配置文件，这里根据前面创建的应用文件进行相关配置，依照各自情况而定<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">su - hadoop  </span><br><span class="line">cd /opt/hadoop/hadoop-1.2.1/conf</span><br></pre></td></tr></table></figure></p>
-<p>core-site.xml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;  </span><br><span class="line">    &lt;property&gt;  </span><br><span class="line">        &lt;name&gt;fs.default.name&lt;/name&gt;  </span><br><span class="line">        &lt;value&gt;hdfs://localhost:9000&lt;/value&gt;  </span><br><span class="line">    &lt;/property&gt;  </span><br><span class="line">    &lt;property&gt;  </span><br><span class="line">        &lt;name&gt;hadoop.tmp.dir&lt;/name&gt;  </span><br><span class="line">        &lt;value&gt;/hadoop/tmp&lt;/value&gt;  </span><br><span class="line">    &lt;/property&gt;  </span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure></p>
-<p>hdfs-site.xml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;  </span><br><span class="line">  &lt;property&gt;  </span><br><span class="line">        &lt;name&gt;dfs.replication&lt;/name&gt;  </span><br><span class="line">        &lt;value&gt;1&lt;/value&gt;  </span><br><span class="line">    &lt;/property&gt;  </span><br><span class="line">    &lt;property&gt;  </span><br><span class="line">        &lt;name&gt;dfs.name.dir&lt;/name&gt;  </span><br><span class="line">        &lt;value&gt;/hadoop/hdfs/name&lt;/value&gt;  </span><br><span class="line">    &lt;/property&gt;  </span><br><span class="line">    &lt;property&gt;  </span><br><span class="line">        &lt;name&gt;dfs.data.dir&lt;/name&gt;  </span><br><span class="line">        &lt;value&gt;/hadoop/hdfs/data&lt;/value&gt;  </span><br><span class="line">    &lt;/property&gt;  </span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure></p>
-<p>mapred-site.xml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;  </span><br><span class="line">  &lt;property&gt;  </span><br><span class="line">        &lt;name&gt;mapred.job.tracker&lt;/name&gt;  </span><br><span class="line">        &lt;value&gt;localhost:9001&lt;/value&gt;  </span><br><span class="line">    &lt;/property&gt;  </span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure></p>
-<p>hadoop-env.sh<br>配置JAVA_HOME 与 HADOOP_HOME_WARN_SUPPRESS。<br>PS：HADOOP_HOME_WARN_SUPPRESS这个变量可以避免某些情况下出现这样的提醒 “WARM: HADOOP_HOME is deprecated”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/usr/java/jdk1.6.0_45  </span><br><span class="line">export HADOOP_HOME_WARN_SUPPRESS=&quot;TRUE&quot;      </span><br><span class="line">source hadoop-env.sh</span><br></pre></td></tr></table></figure></p>
-<p>重新配置 /etc/profile 文件，最终如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/usr/java/jdk1.6.0_45  </span><br><span class="line">export JRE_HOME=$JAVA_HOME/jre  </span><br><span class="line">export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar  </span><br><span class="line">export PATH=$PATH:$JAVA_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin</span><br></pre></td></tr></table></figure></p>
-<p>使更新后的配置文件生效<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure></p>
-<p>##测试hadoop安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[hadoop@localhost conf]$ hadoop version  </span><br><span class="line">Hadoop 1.2.1  </span><br><span class="line">Subversion https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1.2 -r 1503152  </span><br><span class="line">Compiled by mattf on Mon Jul 22 15:23:09 PDT 2013  </span><br><span class="line">From source with checksum 6923c86528809c4e7e6f493b6b413a9a</span><br></pre></td></tr></table></figure></p>
-<p>启动HADOOP<br>需要先格式化namenode，再启动所有服务<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hadoop namenode -format  </span><br><span class="line">start-all.sh</span><br></pre></td></tr></table></figure></p>
-<p>查看进程<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hadoop@localhost conf]$ jps   </span><br><span class="line">6360 NameNode  </span><br><span class="line">6481 DataNode  </span><br><span class="line">6956 Jps  </span><br><span class="line">6818 TaskTracker  </span><br><span class="line">6610 SecondaryNameNode  </span><br><span class="line">6698 JobTracker</span><br></pre></td></tr></table></figure></p>
-<p>如果能找到这些服务，说明Hadoop已经成功启动了。<br>如果有什么问题，可以去/opt/hadoop/hadoop-1.2.1/logs查看相应的日志。</p>
+        <h2 id="【题目】The-string-“PAYPALISHIRING”-is-written-in-a-zigzag-pattern-on-a-given-number-of-rows-like-this-you-may-want-to-display-this-pattern-in-a-fixed-font-for-better-legibility"><a href="#【题目】The-string-“PAYPALISHIRING”-is-written-in-a-zigzag-pattern-on-a-given-number-of-rows-like-this-you-may-want-to-display-this-pattern-in-a-fixed-font-for-better-legibility" class="headerlink" title="【题目】The string “PAYPALISHIRING” is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)"></a>【题目】The string “PAYPALISHIRING” is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)</h2><a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">P   A   H   N</span><br><span class="line">A P L S I I G</span><br><span class="line">Y   I   R</span><br></pre></td></tr></table></figure>
+<p>And then read line by line: “PAHNAPLSIIGYIR”</p>
+<p>Write the code that will take a string and make this conversion given a number of rows:</p>
+<p>string convert(string text, int nRows);</p>
+<p>convert(“PAYPALISHIRING”, 3) should return “PAHNAPLSIIGYIR”.</p>
+<p>【解答】ZigZag是这样一种形式，比如在nRows=4的时候，它是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">P  I  N</span><br><span class="line">A LS IG</span><br><span class="line">YA HR</span><br><span class="line">P  I</span><br></pre></td></tr></table></figure></p>
+<p>建立一个二维数组map用来模拟存放这个东西，最后按行输出，跳过空字符即可：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">public class Solution &#123;</span><br><span class="line">    public String convert(String s, int nRows) &#123;</span><br><span class="line">        if (nRows == 1)</span><br><span class="line">            return s;</span><br><span class="line"> </span><br><span class="line">        // each unit</span><br><span class="line">        int amountInUnit = nRows + nRows - 2;</span><br><span class="line">        int totalUnits = s.length() / amountInUnit;</span><br><span class="line">        if (s.length() % amountInUnit != 0)</span><br><span class="line">            totalUnits++;</span><br><span class="line"> </span><br><span class="line">        // each unit is a rectangle</span><br><span class="line">        int rows = nRows;</span><br><span class="line">        int cols = totalUnits * (nRows - 1);</span><br><span class="line">        char[][] map = new char[rows][cols];</span><br><span class="line">         </span><br><span class="line">        int i = 0;</span><br><span class="line">        while (i &lt; s.length()) &#123;</span><br><span class="line">            char ch = s.charAt(i);</span><br><span class="line"> </span><br><span class="line">            // which unit, starts from 0</span><br><span class="line">            int unitNumber = i / amountInUnit;</span><br><span class="line"> </span><br><span class="line">            // which postion in the unit, starts from 0</span><br><span class="line">            int posInUnit = i % (amountInUnit);</span><br><span class="line"> </span><br><span class="line">            // if it&apos;s in the first column of the unit</span><br><span class="line">            int x, y;</span><br><span class="line">            if (posInUnit &lt; nRows) &#123;</span><br><span class="line">                x = posInUnit;</span><br><span class="line">                y = unitNumber * (nRows - 1);</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                x = nRows - 1 - (posInUnit + 1 - nRows);</span><br><span class="line">                y = nRows - x - 1 + unitNumber * (nRows - 1);</span><br><span class="line">            &#125;</span><br><span class="line">            map[x][y] = ch;</span><br><span class="line">             </span><br><span class="line">            i++;</span><br><span class="line">             </span><br><span class="line">        &#125; // while</span><br><span class="line"> </span><br><span class="line">        // iterate and output</span><br><span class="line">        StringBuilder sb = new StringBuilder();</span><br><span class="line">        for (i = 0; i &lt; rows; i++) &#123;</span><br><span class="line">            for (int j = 0; j &lt; cols; j++) &#123;</span><br><span class="line">                if (map[i][j] != 0)</span><br><span class="line">                    sb.append(map[i][j]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return sb.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -433,7 +417,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/技术文档/" rel="tag">#技术文档</a>
+            <a href="/tags/leetcode/" rel="tag">#leetcode</a>
           
         </div>
       
@@ -442,17 +426,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/05/hello-world-1/" rel="next" title="java虚拟机分析">
-                <i class="fa fa-chevron-left"></i> java虚拟机分析
+              <a href="/2016/06/20/leetcode-palindrome-number/" rel="next" title="leetcode_PalindromeNumber">
+                <i class="fa fa-chevron-left"></i> leetcode_PalindromeNumber
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/06/20/2016-6-20/" rel="prev" title="C#中使用Dictionary实现Map数据结构">
-                C#中使用Dictionary实现Map数据结构 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -467,10 +447,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/06/14/hadoop-deploy/"
-     data-title="CentOS下安装伪分布式Hadoop-1.2.1"
+        <div class="ds-share flat" data-thread-key="2016/06/21/ZigZag-Conversion/"
+     data-title="ZigZag Conversion"
      data-content=""
-     data-url="http://yoursite.com/2016/06/14/hadoop-deploy/">
+     data-url="http://yoursite.com/2016/06/21/ZigZag-Conversion/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -500,8 +480,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/06/14/hadoop-deploy/"
-           data-title="CentOS下安装伪分布式Hadoop-1.2.1" data-url="http://yoursite.com/2016/06/14/hadoop-deploy/">
+      <div class="ds-thread" data-thread-key="2016/06/21/ZigZag-Conversion/"
+           data-title="ZigZag Conversion" data-url="http://yoursite.com/2016/06/21/ZigZag-Conversion/">
       </div>
     
   </div>
@@ -596,7 +576,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备"><span class="nav-number">1.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置环境变量"><span class="nav-number">2.</span> <span class="nav-text">配置环境变量</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#【题目】The-string-“PAYPALISHIRING”-is-written-in-a-zigzag-pattern-on-a-given-number-of-rows-like-this-you-may-want-to-display-this-pattern-in-a-fixed-font-for-better-legibility"><span class="nav-number">1.</span> <span class="nav-text">【题目】The string “PAYPALISHIRING” is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)</span></a></li></ol></div>
             
           </div>
         </section>
