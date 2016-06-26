@@ -104,16 +104,16 @@
 
 
 
-<meta name="description" content="【题目】Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.">
+<meta name="description" content="【题目】2sum">
 <meta property="og:type" content="article">
-<meta property="og:title" content="path_sum">
-<meta property="og:url" content="http://yoursite.com/2016/06/23/path-sum/index.html">
+<meta property="og:title" content="2sum">
+<meta property="og:url" content="http://yoursite.com/2016/06/26/2sum/index.html">
 <meta property="og:site_name" content="小鱼的博客">
-<meta property="og:description" content="【题目】Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.">
-<meta property="og:updated_time" content="2016-06-23T08:09:36.656Z">
+<meta property="og:description" content="【题目】2sum">
+<meta property="og:updated_time" content="2016-06-26T11:49:06.734Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="path_sum">
-<meta name="twitter:description" content="【题目】Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.">
+<meta name="twitter:title" content="2sum">
+<meta name="twitter:description" content="【题目】2sum">
 
 
 
@@ -131,7 +131,7 @@
   };
 </script>
 
-  <title> path_sum | 小鱼的博客 </title>
+  <title> 2sum | 小鱼的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -311,7 +311,7 @@
             
             
               
-                path_sum
+                2sum
               
             
           </h1>
@@ -323,8 +323,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-23T16:05:13+08:00" content="2016-06-23">
-              2016-06-23
+            <time itemprop="dateCreated" datetime="2016-06-26T19:45:05+08:00" content="2016-06-26">
+              2016-06-26
             </time>
           </span>
 
@@ -334,8 +334,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/23/path-sum/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/23/path-sum/" itemprop="commentsCount"></span>
+                <a href="/2016/06/26/2sum/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/26/2sum/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -345,7 +345,7 @@
 
           
           
-             <span id="/2016/06/23/path-sum/" class="leancloud_visitors" data-flag-title="path_sum">
+             <span id="/2016/06/26/2sum/" class="leancloud_visitors" data-flag-title="2sum">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -367,9 +367,8 @@
       
 
       
-        <h1 id="【题目】Given-a-binary-tree-and-a-sum-determine-if-the-tree-has-a-root-to-leaf-path-such-that-adding-up-all-the-values-along-the-path-equals-the-given-sum"><a href="#【题目】Given-a-binary-tree-and-a-sum-determine-if-the-tree-has-a-root-to-leaf-path-such-that-adding-up-all-the-values-along-the-path-equals-the-given-sum" class="headerlink" title="【题目】Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum."></a>【题目】Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.</h1><a id="more"></a>
-<p>For example:<br>Given the below binary tree and sum = 22,<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">      5</span><br><span class="line">     / \</span><br><span class="line">    4   8</span><br><span class="line">   /   / \</span><br><span class="line">  11  13  4</span><br><span class="line"> /  \      \</span><br><span class="line">7    2      1</span><br></pre></td></tr></table></figure></p>
-<p>return true, as there exist a root-to-leaf path 5-&gt;4-&gt;11-&gt;2 which sum is 22.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">public class Solution &#123;</span><br><span class="line">    public boolean hasPathSum(TreeNode root, int sum) &#123;</span><br><span class="line">        if (null==root)</span><br><span class="line">            return false;</span><br><span class="line">             </span><br><span class="line">        List&lt;Integer&gt; list = calculate(root, sum);</span><br><span class="line">        return list.contains(sum);</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    private List&lt;Integer&gt; calculate(TreeNode root, int sum) &#123;</span><br><span class="line">        List&lt;Integer&gt; list = new ArrayList&lt;Integer&gt;();</span><br><span class="line">        if (root.left!=null) &#123;</span><br><span class="line">            for (int num : calculate(root.left, sum))&#123;</span><br><span class="line">                num += root.val;</span><br><span class="line">                list.add(num);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if (root.right!=null) &#123;</span><br><span class="line">            for (int num : calculate(root.right, sum))&#123;</span><br><span class="line">                num += root.val;</span><br><span class="line">                list.add(num);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if (root.left==null&amp;&amp;root.right==null)&#123;</span><br><span class="line">            list.add(root.val);</span><br><span class="line">        &#125;</span><br><span class="line">        return list;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <h2 id="【题目】2sum"><a href="#【题目】2sum" class="headerlink" title="【题目】2sum"></a>【题目】2sum</h2><a id="more"></a>
+<p>这是一道非常经典的题目，brute force时间复杂度为O(n^2), 对每一对pair两两比较。 优化的方法一般有两种，第一种是用哈希表，时间复杂度为O(n),同时空间复杂度也是O(n),代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">public int[] twoSum(int[] numbers, int target) &#123;  </span><br><span class="line">    int[] res = new int[2];  </span><br><span class="line">    if(numbers==null || numbers.length&lt;2)  </span><br><span class="line">        return null;  </span><br><span class="line">    HashMap&lt;Integer,Integer&gt; map = new HashMap&lt;Integer,Integer&gt;();  </span><br><span class="line">    for(int i=0;i&lt;numbers.length;i++)  </span><br><span class="line">    &#123;  </span><br><span class="line">        if(map.containsKey(target-numbers[i]))  </span><br><span class="line">        &#123;  </span><br><span class="line">            res[0]=map.get(target-numbers[i])+1;  </span><br><span class="line">            res[1]=i+1;  </span><br><span class="line">            return res;  </span><br><span class="line">        &#125;  </span><br><span class="line">        map.put(numbers[i],i);  </span><br><span class="line">    &#125;  </span><br><span class="line">    return null;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -421,17 +420,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/21/ZigZag-Conversion/" rel="next" title="ZigZag Conversion">
-                <i class="fa fa-chevron-left"></i> ZigZag Conversion
+              <a href="/2016/06/24/Maximum-Depth-of-Binary-Tree/" rel="next" title="Maximum Depth of Binary Tree">
+                <i class="fa fa-chevron-left"></i> Maximum Depth of Binary Tree
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/06/24/Maximum-Depth-of-Binary-Tree/" rel="prev" title="Maximum Depth of Binary Tree">
-                Maximum Depth of Binary Tree <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -446,10 +441,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/06/23/path-sum/"
-     data-title="path_sum"
+        <div class="ds-share flat" data-thread-key="2016/06/26/2sum/"
+     data-title="2sum"
      data-content=""
-     data-url="http://yoursite.com/2016/06/23/path-sum/">
+     data-url="http://yoursite.com/2016/06/26/2sum/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -479,8 +474,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/06/23/path-sum/"
-           data-title="path_sum" data-url="http://yoursite.com/2016/06/23/path-sum/">
+      <div class="ds-thread" data-thread-key="2016/06/26/2sum/"
+           data-title="2sum" data-url="http://yoursite.com/2016/06/26/2sum/">
       </div>
     
   </div>
@@ -575,7 +570,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#【题目】Given-a-binary-tree-and-a-sum-determine-if-the-tree-has-a-root-to-leaf-path-such-that-adding-up-all-the-values-along-the-path-equals-the-given-sum"><span class="nav-number">1.</span> <span class="nav-text">【题目】Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#【题目】2sum"><span class="nav-number">1.</span> <span class="nav-text">【题目】2sum</span></a></li></ol></div>
             
           </div>
         </section>
