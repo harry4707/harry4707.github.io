@@ -88,7 +88,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="leetcode," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -104,16 +104,15 @@
 
 
 
-<meta name="description" content="【题目】2sum">
-<meta property="og:type" content="article">
-<meta property="og:title" content="2sum">
-<meta property="og:url" content="http://yoursite.com/2016/06/26/2sum/index.html">
+<meta name="description" content="闲看庭前花开花落，漫随天外云卷云舒">
+<meta property="og:type" content="website">
+<meta property="og:title" content="小鱼的博客">
+<meta property="og:url" content="http://yoursite.com/archives/page/2/index.html">
 <meta property="og:site_name" content="小鱼的博客">
-<meta property="og:description" content="【题目】2sum">
-<meta property="og:updated_time" content="2016-06-26T11:49:06.734Z">
+<meta property="og:description" content="闲看庭前花开花落，漫随天外云卷云舒">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2sum">
-<meta name="twitter:description" content="【题目】2sum">
+<meta name="twitter:title" content="小鱼的博客">
+<meta name="twitter:description" content="闲看庭前花开花落，漫随天外云卷云舒">
 
 
 
@@ -131,7 +130,7 @@
   };
 </script>
 
-  <title> 2sum | 小鱼的博客 </title>
+  <title> 归档 | 小鱼的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -162,7 +161,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right page-post-detail ">
+  <div class="container one-collumn sidebar-position-right  page-archive  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -290,200 +289,77 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-collapse">
+    <span class="archive-move-on"></span>
+
+    <span class="archive-page-counter">
+      
+      
+      
+        
+      
+      嗯..! 目前共计 11 篇日志。 继续努力。
+    </span>
+
     
 
-  
-  
+      
+      
+      
 
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
+      
         
+        <div class="collection-title">
+          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
+        </div>
+      
+      
+
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
+            <a class="post-title-link" href="/2016/06/05/hello-world/" itemprop="url">
               
-                2sum
+                <span itemprop="name">Hello World</span>
               
-            
-          </h1>
+            </a>
         
+      </h1>
 
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-26T19:45:05+08:00" content="2016-06-26">
-              2016-06-26
-            </time>
-          </span>
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-06-05T19:06:39+08:00"
+              content="2016-06-05" >
+          06-05
+        </time>
+      </div>
 
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/06/26/2sum/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/26/2sum/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/06/26/2sum/" class="leancloud_visitors" data-flag-title="2sum">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <h2 id="【题目】2sum"><a href="#【题目】2sum" class="headerlink" title="【题目】2sum"></a>【题目】2sum</h2><a id="more"></a>
-<p>这是一道非常经典的题目，brute force时间复杂度为O(n^2), 对每一对pair两两比较。 优化的方法一般有两种，第一种是用哈希表，时间复杂度为O(n),同时空间复杂度也是O(n),代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">public int[] twoSum(int[] numbers, int target) &#123;  </span><br><span class="line">    int[] res = new int[2];  </span><br><span class="line">    if(numbers==null || numbers.length&lt;2)  </span><br><span class="line">        return null;  </span><br><span class="line">    HashMap&lt;Integer,Integer&gt; map = new HashMap&lt;Integer,Integer&gt;();  </span><br><span class="line">    for(int i=0;i&lt;numbers.length;i++)  </span><br><span class="line">    &#123;  </span><br><span class="line">        if(map.containsKey(target-numbers[i]))  </span><br><span class="line">        &#123;  </span><br><span class="line">            res[0]=map.get(target-numbers[i])+1;  </span><br><span class="line">            res[1]=i+1;  </span><br><span class="line">            return res;  </span><br><span class="line">        &#125;  </span><br><span class="line">        map.put(numbers[i],i);  </span><br><span class="line">    &#125;  </span><br><span class="line">    return null;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-
-    <div>
-      
-        
-      
-    </div>
-
-    <div>
-      
-        
-  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
-    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-      <span>赏</span>
-    </button>
-    <div id="QR" style="display: none;">
-      
-        <div id="wechat" style="display: inline-block">
-          <img id="wechat_qr" src="/images/wechatpay-reward-image.jpg" alt="小鱼 WeChat Pay"/>
-          <p>微信打赏</p>
-        </div>
-      
-      
-        <div id="alipay" style="display: inline-block">
-          <img id="alipay_qr" src="/images/alipay-reward-image.jpg" alt="小鱼 Alipay"/>
-          <p>支付宝打赏</p>
-        </div>
-      
-    </div>
-  </div>
-
-
-      
-    </div>
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/leetcode/" rel="tag">#leetcode</a>
-          
-        </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2016/06/24/Maximum-Depth-of-Binary-Tree/" rel="next" title="Maximum Depth of Binary Tree">
-                <i class="fa fa-chevron-left"></i> Maximum Depth of Binary Tree
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/06/27/3sum/" rel="prev" title="3sum">
-                3sum <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
+    </header>
   </article>
 
 
 
-    <div class="post-spread">
-      
-        <div class="ds-share flat" data-thread-key="2016/06/26/2sum/"
-     data-title="2sum"
-     data-content=""
-     data-url="http://yoursite.com/2016/06/26/2sum/">
-  <div class="ds-share-inline">
-    <ul  class="ds-share-icons-16">
+    
 
-      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
-      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
-      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
-      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
-      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+  </section>
 
-    </ul>
-    <div class="ds-share-icons-more">
-    </div>
-  </div>
-</div>
-      
-    </div>
-  </div>
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/archives/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
+  </nav>
+
+
 
 
           </div>
           
 
-  <p>热评文章</p>
-  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
-
 
           
-  <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2016/06/26/2sum/"
-           data-title="2sum" data-url="http://yoursite.com/2016/06/26/2sum/">
-      </div>
-    
-  </div>
-
 
         </div>
         
@@ -503,17 +379,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/yy.png"
@@ -567,17 +434,6 @@
 
       </section>
 
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#【题目】2sum"><span class="nav-number">1.</span> <span class="nav-text">【题目】2sum</span></a></li></ol></div>
-            
-          </div>
-        </section>
       
 
     </div>
@@ -681,9 +537,11 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
-
+  
+    <script type="text/javascript" id="motion.page.archive">
+      $('.archive-year').velocity('transition.slideLeftIn');
+    </script>
+  
 
 
   
