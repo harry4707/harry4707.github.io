@@ -88,7 +88,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="leetcode," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -104,16 +104,16 @@
 
 
 
-<meta name="description" content="【题目】Given a binary tree, find its maximum depth.">
+<meta name="description" content="静态代码块和静态方法区别一般情况下,如果有些代码必须在项目启动的时候就执行的时候,需要使用静态代码块,这种代码是主动执行的;需要在项目启动的时候就初始化,在不创建对象的情况下,其他程序来调用的时候,需要使用静态方法,这种代码是被动执行的. 静态方法在类加载的时候 就已经加载 可以用类名直接调用比如main方法就必须是静态的 这是程序入口两者的区别就是:静态代码块是自动执行的;静态方法是被调用的时候">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Maximum Depth of Binary Tree">
-<meta property="og:url" content="http://yoursite.com/2016/06/24/Maximum-Depth-of-Binary-Tree/index.html">
+<meta property="og:title" content="java中静态代码块的用法">
+<meta property="og:url" content="http://yoursite.com/2016/07/22/static-method/index.html">
 <meta property="og:site_name" content="小鱼的博客">
-<meta property="og:description" content="【题目】Given a binary tree, find its maximum depth.">
-<meta property="og:updated_time" content="2016-06-24T08:36:28.766Z">
+<meta property="og:description" content="静态代码块和静态方法区别一般情况下,如果有些代码必须在项目启动的时候就执行的时候,需要使用静态代码块,这种代码是主动执行的;需要在项目启动的时候就初始化,在不创建对象的情况下,其他程序来调用的时候,需要使用静态方法,这种代码是被动执行的. 静态方法在类加载的时候 就已经加载 可以用类名直接调用比如main方法就必须是静态的 这是程序入口两者的区别就是:静态代码块是自动执行的;静态方法是被调用的时候">
+<meta property="og:updated_time" content="2016-07-23T13:40:46.358Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Maximum Depth of Binary Tree">
-<meta name="twitter:description" content="【题目】Given a binary tree, find its maximum depth.">
+<meta name="twitter:title" content="java中静态代码块的用法">
+<meta name="twitter:description" content="静态代码块和静态方法区别一般情况下,如果有些代码必须在项目启动的时候就执行的时候,需要使用静态代码块,这种代码是主动执行的;需要在项目启动的时候就初始化,在不创建对象的情况下,其他程序来调用的时候,需要使用静态方法,这种代码是被动执行的. 静态方法在类加载的时候 就已经加载 可以用类名直接调用比如main方法就必须是静态的 这是程序入口两者的区别就是:静态代码块是自动执行的;静态方法是被调用的时候">
 
 
 
@@ -131,7 +131,7 @@
   };
 </script>
 
-  <title> Maximum Depth of Binary Tree | 小鱼的博客 </title>
+  <title> java中静态代码块的用法 | 小鱼的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -311,7 +311,7 @@
             
             
               
-                Maximum Depth of Binary Tree
+                java中静态代码块的用法
               
             
           </h1>
@@ -323,8 +323,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-24T16:33:11+08:00" content="2016-06-24">
-              2016-06-24
+            <time itemprop="dateCreated" datetime="2016-07-22T13:42:40+08:00" content="2016-07-22">
+              2016-07-22
             </time>
           </span>
 
@@ -334,8 +334,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/24/Maximum-Depth-of-Binary-Tree/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/24/Maximum-Depth-of-Binary-Tree/" itemprop="commentsCount"></span>
+                <a href="/2016/07/22/static-method/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/22/static-method/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -345,7 +345,7 @@
 
           
           
-             <span id="/2016/06/24/Maximum-Depth-of-Binary-Tree/" class="leancloud_visitors" data-flag-title="Maximum Depth of Binary Tree">
+             <span id="/2016/07/22/static-method/" class="leancloud_visitors" data-flag-title="java中静态代码块的用法">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -367,8 +367,18 @@
       
 
       
-        <h2 id="【题目】Given-a-binary-tree-find-its-maximum-depth"><a href="#【题目】Given-a-binary-tree-find-its-maximum-depth" class="headerlink" title="【题目】Given a binary tree, find its maximum depth."></a>【题目】Given a binary tree, find its maximum depth.</h2><a id="more"></a>
-<p>The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.<br>【解答】还是和前面求最小深度的题目提到的一样，在这里根节点被认为深度为1，空树被认为深度为0：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public class Solution &#123;</span><br><span class="line">    int max = 0;</span><br><span class="line">    public int maxDepth(TreeNode root) &#123;</span><br><span class="line">        if (null==root)</span><br><span class="line">            return 0;</span><br><span class="line">             </span><br><span class="line">        traverse(root, 1);</span><br><span class="line">        return max;</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    private void traverse(TreeNode root, int depth) &#123;</span><br><span class="line">        if (depth &gt;= max)</span><br><span class="line">            max = depth;</span><br><span class="line">        if (null != root.left)</span><br><span class="line">            traverse(root.left, depth+1);</span><br><span class="line">        if (null != root.right)</span><br><span class="line">            traverse(root.right, depth+1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <h3 id="静态代码块和静态方法区别"><a href="#静态代码块和静态方法区别" class="headerlink" title="静态代码块和静态方法区别"></a>静态代码块和静态方法区别</h3><p>一般情况下,如果有些代码必须在项目启动的时候就执行的时候,需要使用静态代码块,这种代码是主动执行的;需要在项目启动的时候就初始化,在不创建对象的情况下,其他程序来调用的时候,需要使用静态方法,这种代码是被动执行的. 静态方法在类加载的时候 就已经加载 可以用类名直接调用比如main方法就必须是静态的 这是程序入口两者的区别就是:静态代码块是自动执行的;静态方法是被调用的时候才执行的.<br><a id="more"></a></p>
+<h3 id="静态方法"><a href="#静态方法" class="headerlink" title="静态方法"></a>静态方法</h3><p>（1）在Java里，可以定义一个不需要创建对象的方法，这种方法就是静态方法。要实现这样的效果，只需要在类中定义的方法前加上static关键字。<br>例如：public static int maximum(int n1,int n2)<br>使用类的静态方法时，注意：</p>
+<p>   1.在静态方法里只能直接调用同类中其他的静态成员（包括变量和方法），而不能直接访问类中的非静态成员。这是因为，对于非静态的方法和变量，需要先创建类的实例对象后才可使用，而静态方法在使用前不用创建任何对象。</p>
+<p>   2.静态方法不能以任何方式引用this和super关键字，因为静态方法在使用前不用创建任何实例对象，当静态方法调用时，this所引用的对象根本没有产生。</p>
+<p>（2）静态变量是属于整个类的变量而不是属于某个对象的。注意不能把任何方法体内的变量声明为静态，例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> fun()</span><br><span class="line">&#123;static int i=0;//非法。&#125;</span><br></pre></td></tr></table></figure></p>
+<p>（3）一个类可以使用不包含在任何方法体中的静态代码块，当类被载入时，静态代码块被执行，且只被执行一次，静态块常用来执行类属性的初始化。例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">static</span><br><span class="line">&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="static类装载步骤"><a href="#static类装载步骤" class="headerlink" title="static类装载步骤"></a>static类装载步骤</h3><p>在Java中，类装载器把一个类装入Java虚拟机中，要经过三个步骤来完成：装载、链接和初始化，其中链接又可以分成校验、准备和解析三步，除了解析外，其它步骤是严格按照顺序完成的，各个步骤的主要工作如下：</p>
+<p>装载：查找和导入类或接口的二进制数据；<br>链接：执行下面的校验、准备和解析步骤，其中解析步骤是可以选择的；<br>校验：检查导入类或接口的二进制数据的正确性；<br>准备：给类的静态变量分配并初始化存储空间；<br>解析：将符号引用转成直接引用；<br>初始化：激活类的静态变量的初始化Java代码和静态Java代码块。<br>初始化类中属性是静态代码块的常用用途，但只能使用一次。</p>
+<h3 id="静态代码块的初始化顺序"><a href="#静态代码块的初始化顺序" class="headerlink" title="静态代码块的初始化顺序"></a>静态代码块的初始化顺序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">class Parent&#123; </span><br><span class="line">static String name = &quot;hello&quot;; </span><br><span class="line">&#123; </span><br><span class="line">	System.out.println(&quot;parent block&quot;); </span><br><span class="line">&#125; </span><br><span class="line">static &#123; </span><br><span class="line">	System.out.println(&quot;parent static block&quot;); </span><br><span class="line">&#125; </span><br><span class="line">public Parent()&#123; </span><br><span class="line">	System.out.println(&quot;parent constructor&quot;); </span><br><span class="line">&#125; </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line">class Child extends Parent&#123; </span><br><span class="line">static String childName = &quot;hello&quot;; </span><br><span class="line">&#123; </span><br><span class="line">	System.out.println(&quot;child block&quot;); </span><br><span class="line">&#125; </span><br><span class="line">static &#123; </span><br><span class="line">	System.out.println(&quot;child static block&quot;); </span><br><span class="line">&#125; </span><br><span class="line">public Child()&#123; </span><br><span class="line">	System.out.println(&quot;child constructor&quot;); </span><br><span class="line">&#125; </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line">public class StaticIniBlockOrderTest &#123; </span><br><span class="line"></span><br><span class="line">public static void main(String[] args) &#123; </span><br><span class="line">new Child();//语句(*) </span><br><span class="line">&#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>解答：当执行完语句(*)时，打印结果是这样一个顺序 :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">parent static block</span><br><span class="line">child static block</span><br><span class="line">parent block</span><br><span class="line">parent constructor</span><br><span class="line">child block</span><br><span class="line">child constructor</span><br></pre></td></tr></table></figure></p>
+<p>分析:<br>当执行new Child()时，它首先去看父类里面有没有静态代码块，如果有，它先去执行父类里面静态代码块里面的内容，当父类的静态代码块里面的内容执行完毕之后，接着去执行子类(自己这个类)里面的静态代码块，当子类的静态代码块执行完毕之后，它接着又去看父类有没有非静态代码块，如果有就执行父类的非静态代码块，父类的非静态代码块执行完毕，接着执行父类的构造方法；父类的构造方法执行完毕之后，它接着去看子类有没有非静态代码块，如果有就执行子类的非静态代码块。子类的非静态代码块执行完毕再去执行子类的构造方法，这个就是一个对象的初始化顺序。</p>
+<p>总结:<br>对象的初始化顺序:首先执行父类静态的内容，父类静态的内容执行完毕后，接着去执行子类的静态的内容，当子类的静态内容执行完毕之后，再去看父类有没有非静态代码块，如果有就执行父类的非静态代码块，父类的非静态代码块执行完毕，接着执行父类的构造方法；父类的构造方法执行完毕之后，它接着去看子类有没有非静态代码块，如果有就执行子类的非静态代码块。子类的非静态代码块执行完毕再去执行子类的构造方法。总之一句话，静态代码块内容先执行，接着执行父类非静态代码块和构造方法，然后执行子类非静态代码块和构造方法。注意:子类的构造方法，不管这个构造方法带不带参数，默认的它都会先去寻找父类的不带参数的构造方法。如果父类没有不带参数的构造方法，那么子类必须用supper关键子来调用父类带参数的构造方法，否则编译不能通过。</p>
 
       
     </div>
@@ -409,28 +419,18 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/leetcode/" rel="tag">#leetcode</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/23/path-sum/" rel="next" title="path_sum">
-                <i class="fa fa-chevron-left"></i> path_sum
+              <a href="/2016/07/05/java-mysql/" rel="next" title="java-mysql数据类型转换">
+                <i class="fa fa-chevron-left"></i> java-mysql数据类型转换
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/06/26/2sum/" rel="prev" title="2sum">
-                2sum <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -445,10 +445,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/06/24/Maximum-Depth-of-Binary-Tree/"
-     data-title="Maximum Depth of Binary Tree"
+        <div class="ds-share flat" data-thread-key="2016/07/22/static-method/"
+     data-title="java中静态代码块的用法"
      data-content=""
-     data-url="http://yoursite.com/2016/06/24/Maximum-Depth-of-Binary-Tree/">
+     data-url="http://yoursite.com/2016/07/22/static-method/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -478,8 +478,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/06/24/Maximum-Depth-of-Binary-Tree/"
-           data-title="Maximum Depth of Binary Tree" data-url="http://yoursite.com/2016/06/24/Maximum-Depth-of-Binary-Tree/">
+      <div class="ds-thread" data-thread-key="2016/07/22/static-method/"
+           data-title="java中静态代码块的用法" data-url="http://yoursite.com/2016/07/22/static-method/">
       </div>
     
   </div>
@@ -574,7 +574,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#【题目】Given-a-binary-tree-find-its-maximum-depth"><span class="nav-number">1.</span> <span class="nav-text">【题目】Given a binary tree, find its maximum depth.</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#静态代码块和静态方法区别"><span class="nav-number">1.</span> <span class="nav-text">静态代码块和静态方法区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#静态方法"><span class="nav-number">2.</span> <span class="nav-text">静态方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#static类装载步骤"><span class="nav-number">3.</span> <span class="nav-text">static类装载步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#静态代码块的初始化顺序"><span class="nav-number">4.</span> <span class="nav-text">静态代码块的初始化顺序</span></a></li></ol></div>
             
           </div>
         </section>
